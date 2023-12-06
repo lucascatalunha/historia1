@@ -10,16 +10,16 @@ void main() async {
   await Future.delayed(Duration(seconds: 1));
   await meuPrint('3 Tomo um banho');
   await Future.delayed(Duration(seconds: 1));
-  // String? digitado = stdin.readLineSync();
-  // if (digitado == '1') {
-  //   print('');
-  // }
+  String? digitado = stdin.readLineSync();
+  if (digitado == '1') {
+    print('');
+  }
 }
 
 Future<void> meuPrint(String texto) async {
   List<String> letras = texto.split('');
   for (var letra in letras) {
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(Duration(milliseconds: 40));
     stdout.write(letra);
   }
   stdout.write('\n');
